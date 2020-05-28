@@ -164,7 +164,6 @@ img {
 /*Стили для Героя*/
 
 .hero {
-  display: flex-block;
   text-align: center;
   max-width: 1600px;
   height: 600px;
@@ -252,7 +251,9 @@ img {
 /*Стили Направления разработки*/
 .services-list {
   display: flex;
-  margin-top: 50px;
+}
+.services-list .item {
+  width: 370px;
 }
 .services-list .item + .item {
   margin-left: 30px;
@@ -269,11 +270,24 @@ img {
 }
 
 /*Стили для Наша команда*/
+.team {
+  background: var(--secondary-background-color);
+}
+
 .team-list {
   display: flex;
+  justify-content: center;
 }
 .team-list .member + .member {
   margin-left: 30px;
+}
+
+.member {
+  width: 270px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .team-list h3 {
@@ -304,6 +318,7 @@ img {
 }
 .team-socials {
   display: flex;
+  justify-content: center;
   margin-bottom: 24px;
 }
 /*Стили для секции постоянные клиенты*/
@@ -325,7 +340,7 @@ img {
   padding-bottom: 21px;
 
   /*применила ширину и высоту для позиционирования будет понятно, как с бэкграунд и рамками - сделаю правильно*/
-  width: 175px;
+  width: 170px;
   height: 90px;
 }
 
@@ -337,6 +352,10 @@ footer {
 
 footer .title {
   margin-bottom: 21px;
+}
+b {
+  font-weight: 700;
+  font-size: 14px;
 }
 .footer-flex {
   display: flex;
@@ -377,17 +396,63 @@ footer .logo {
 /*Footer social media*/
 
 .socials .list {
-  /*так как пока бэк-граунд картинок, не могу отображение сделать точно, как на макете*/
   display: flex;
+  align-content: space-between;
+  min-width: 296px;
 }
-.socials .title,
-.subscribe .title {
-  margin-bottom: 21px;
+.socials-item:not(:nth-last-child(1)) {
+  margin-right: 10px;
+}
+.socials-item::before {
+  content: '';
+  display: block;
+  height: 44px;
+  width: 44px;
+  padding: 12px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.instagram::before {
+  background-image: url(../images/footer/instagram.svg);
+}
+.twitter::before {
+  background-image: url(../images/footer/twitter.svg);
+}
+.facebook::before {
+  background-image: url(../images/footer/facebook.svg);
+}
+.linkedin::before {
+  background-image: url(../images/footer/linkedin.svg);
+}
+
+.socials-item:hover::before,
+.socials-item:focus::before {
+  background-color: var(--primary-hover-color);
+  cursor: pointer;
 }
 
 /*Footer signup*/
 .subscribe {
   margin-left: auto;
+}
+.subscribe-icon {
+  padding-left: 29px;
+}
+.subscribe-icon::after {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(../images/footer/icon-send.svg);
 }
 /*Footer copyright*/
 .text-copyright {
@@ -460,8 +525,6 @@ button:focus {
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-
-  background-color: tomato;
 }
 .work-link {
   display: block;
