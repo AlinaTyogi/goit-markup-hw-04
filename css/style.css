@@ -455,9 +455,6 @@ button:focus {
   margin: -15px;
 }
 .example {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 370px;
   margin: 15px;
 
@@ -487,6 +484,7 @@ button:focus {
 }
 .work-examples p {
   margin: 0px;
+  padding: 0px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
