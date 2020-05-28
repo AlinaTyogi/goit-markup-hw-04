@@ -121,8 +121,10 @@ img {
   color: var(--primary-hover-color);
 }
 .contact-item {
+  display: block;
   color: var(--primary-text-color);
-  padding-left: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-flex,
@@ -138,6 +140,14 @@ img {
 }
 .menu-contacts {
   margin-left: auto;
+}
+
+.item-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+.item-icon:hover {
+  fill: var(--primary-hover-color);
 }
 
 /*Стили для кнопок ссылок. Когда будем делать НАСТОЯЩУЮ кнопку в футере- потом уберу*/
@@ -207,32 +217,17 @@ img {
 .benefits-list .item {
   min-width: 270px;
 }
-.benefits-list > .item::before {
-  content: '';
+.benefit-icon {
   display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
+  min-width: 270px;
   height: 120px;
-
-  background-repeat: no-repeat;
-  background-position: center;
 
   background-color: #f5f4fa;
   border-radius: 4px;
 }
-
-.antena::before {
-  background-image: url(../images/Addvantages/antenna.svg);
-}
-.clock::before {
-  background-image: url(../images/Addvantages/clock.svg);
-}
-.diagramm::before {
-  background-image: url(../images/Addvantages/diagram.svg);
-}
-.astronaut::before {
-  background-image: url(..//images/Addvantages/astronaut.svg);
-}
-
 .benefits > .container {
   border-bottom: 1px solid #ececec;
 }
@@ -318,7 +313,7 @@ img {
 }
 .team-socials {
   display: flex;
-  justify-content: center;
+  align-content: space-between;
   margin-bottom: 24px;
 }
 /*Стили для секции постоянные клиенты*/
@@ -403,56 +398,36 @@ footer .logo {
 .socials-item:not(:nth-last-child(1)) {
   margin-right: 10px;
 }
-.socials-item::before {
-  content: '';
+.socials-link {
   display: block;
   height: 44px;
   width: 44px;
   padding: 12px;
 
-  background-repeat: no-repeat;
-  background-position: center;
-
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-.instagram::before {
-  background-image: url(../images/footer/instagram.svg);
-}
-.twitter::before {
-  background-image: url(../images/footer/twitter.svg);
-}
-.facebook::before {
-  background-image: url(../images/footer/facebook.svg);
-}
-.linkedin::before {
-  background-image: url(../images/footer/linkedin.svg);
-}
-
-.socials-item:hover::before,
-.socials-item:focus::before {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--primary-hover-color);
   cursor: pointer;
+}
+.socials-icon {
+  fill: var(--primary-background-color);
 }
 
 /*Footer signup*/
 .subscribe {
   margin-left: auto;
 }
-.subscribe-icon {
-  padding-left: 29px;
+.subscribe > .link-button {
+  display: flex;
+  align-items: center;
 }
-.subscribe-icon::after {
-  content: '';
+
+.subscribe-icon {
   display: inline-block;
-  height: 24px;
-  width: 24px;
   margin-left: 10px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-
-  background-image: url(../images/footer/icon-send.svg);
 }
 /*Footer copyright*/
 .text-copyright {

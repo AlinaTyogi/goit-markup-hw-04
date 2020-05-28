@@ -34,19 +34,24 @@
         </nav>
         <ul class="menu-contacts">
           <li class="item">
-            <a class="contact-item" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="contact-item" href="mailto:info@devstudio.com">
+              <svg class="item-icon" width="16" height="11">
+                <use href="./images/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li class="item">
-            <a class="contact-item" href="tel:380961111111"
-              >+38 096 111 11 11</a
-            >
+            <a class="contact-item" href="tel:380961111111">
+              <svg class="item-icon" width="10" height="15">
+                <use href="./images/sprite.svg#icon-telephone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
     </header>
-
     <!--Основной контент страницы-->
     <main>
       <!-- Фильтры работ -->
@@ -261,17 +266,65 @@
           <h2 class="is-hidden">Ссылки на социальные сети студии</h2>
           <h3 class="title"><b>присоединяйтесь</b></h3>
           <ul class="list">
-            <li class="socials-item instagram">
-              <a href="№" aria-label="Ссылка на Instagram" target="_blank"></a>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="№"
+                aria-label="Ссылка на Instagram"
+                target="_blank"
+              >
+                <svg class="socials-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+                <span class="is-hidden">
+                  Инстаграм
+                </span>
+              </a>
             </li>
-            <li class="socials-item twitter">
-              <a href="№" aria-label="Ссылка на Twitter" target="_blank"></a>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="№"
+                aria-label="Ссылка на Twitter"
+                target="_blank"
+              >
+                <svg class="socials-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+                <span class="is-hidden">
+                  Твиттер
+                </span>
+              </a>
             </li>
-            <li class="socials-item facebook">
-              <a href="№" aria-label="Ссылка на Facebook" target="_blank"></a>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="№"
+                aria-label="Ссылка на Facebook"
+                target="_blank"
+              >
+                <svg class="socials-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+                <span class="is-hidden">
+                  Фейсбук
+                </span>
+              </a>
             </li>
-            <li class="socials-item linkedin">
-              <a href="№" aria-label="Ссылка на LinkedIn" target="_blank"></a>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="№"
+                aria-label="Ссылка на LinkedIn"
+                target="_blank"
+              >
+                <svg class="socials-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+                <span class="is-hidden">
+                  ЛинкедИн
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -279,7 +332,12 @@
         <div class="subscribe">
           <h2 class="is-hidden">Форма подписки</h2>
           <h3 class="title"><b>Подпишитесь на рассылку</b></h3>
-          <a class="link-button subscribe-icon" href="#">Подписаться</a>
+          <a class="link-button" href="#"
+            >Подписаться
+            <svg class="subscribe-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </a>
         </div>
       </div>
       <p class="text-copyright container">
